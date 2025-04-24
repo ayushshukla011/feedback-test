@@ -255,7 +255,7 @@ function App() {
             animate={{ opacity: 1 }}
             transition={{ delay: 0.5, duration: 0.5 }}
           >
-            <p>© {new Date().getFullYear()} Ayush • Feedback Application</p>
+            <p>© {new Date().getFullYear()} Ayush Shukla • ayushshukla3999@gmail.com • Feedback Application</p>
             <p className="mt-1">Built with React, Tailwind CSS, and Firebase</p>
           </motion.div>
         </div>
