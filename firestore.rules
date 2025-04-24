@@ -1,0 +1,18 @@
+rules_version = '2';
+service cloud.firestore {
+  match /databases/{database}/documents {
+    // Allow anyone to submit feedback 
+    match /feedbacks/{feedbackId} {
+      allow create: if request.resource.data.name != null &&
+                    request.resource.data.email != null &&
+                    request.resource.data.message != null;
+                    
+      // Only authenticated users can read feedbacks
+      allow read: if request.auth != null;
+      
+      // Only admins can update or delete
+      allow update, delete: if request.auth != null && 
+                          request.auth.token.email.matches('.*@yourdomain.com');
+    }
+  }
+} 
