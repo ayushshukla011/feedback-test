@@ -96,6 +96,3 @@ VITE_FIREBASE_MEASUREMENT_ID=your_measurement_id
 
 This project uses Firebase for authentication, database, and storage. The configuration is stored in environment variables for security. Make sure to update the `.env` file with your Firebase project details.
 
-## License
-
-MIT
